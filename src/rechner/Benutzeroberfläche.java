@@ -333,6 +333,13 @@ public class Benutzeroberfläche implements ItemListener {
 			ergebnis = zahl * Double.parseDouble(textField.getText());
 			textField.setText(Double.toString(ergebnis));
 			break;
+			
+			
+		// Division
+		case 4:
+			ergebnis = zahl / Double.parseDouble(textField.getText());
+			textField.setText(Double.toString(ergebnis));
+			break;
 		
 		// Dezimalzahl zu Hexadezimalzahl
 		case 8:
@@ -590,6 +597,23 @@ public class Benutzeroberfläche implements ItemListener {
 				button_22.setForeground(Color.WHITE);
 				button_22.setBackground(Color.BLACK);
 				frame.getContentPane().add(button_22);
+		
+				
+			// Button für "/"
+			JButton button_23 = new JButton("/");
+			button_23.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					zahl = Double.parseDouble(textField.getText()); // zahl wird vom Benutzer von Zahlen gewählt
+					rechnen = 4; // ruft case 4 von funktionen() auf
+					textField.setText("");
+					label1.setText(zahl + "/"); // zahl erscheint mit operation oben im label
+				}
+			});
+			button_23.setBounds(144, 122, 48, 23);
+			button_23.setForeground(Color.WHITE);
+			button_23.setBackground(Color.BLACK);
+			frame.getContentPane().add(button_23);
+				
 				
 		// Button für "5"
 		JButton button_1 = new JButton("5");
@@ -614,7 +638,17 @@ public class Benutzeroberfläche implements ItemListener {
 		button_2.setBackground(Color.BLACK);
 		frame.getContentPane().add(button_2);
 		
-		
+		// Button für "1"
+				JButton button_3 = new JButton("1");
+				button_3.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						textField.setText(textField.getText() + "1");
+					}
+				});
+				button_3.setBounds(0, 191, 47, 23);
+				button_3.setForeground(Color.WHITE);
+				button_3.setBackground(Color.BLACK);
+				frame.getContentPane().add(button_3);
 		
 		// Button für "."
 		JButton button_9 = new JButton(".");
