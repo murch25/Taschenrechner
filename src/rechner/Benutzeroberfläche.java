@@ -649,6 +649,18 @@ public class Benutzeroberfläche implements ItemListener {
 				button_3.setForeground(Color.WHITE);
 				button_3.setBackground(Color.BLACK);
 				frame.getContentPane().add(button_3);
+				
+		// Button für "6"
+				JButton button_5 = new JButton("6");
+				button_5.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						textField.setText(textField.getText() + "6");
+					}
+				});
+				button_5.setBounds(98, 169, 47, 23);
+				button_5.setForeground(Color.WHITE);
+				button_5.setBackground(Color.BLACK);
+				frame.getContentPane().add(button_5);
 		
 		// Button für "."
 		JButton button_9 = new JButton(".");
