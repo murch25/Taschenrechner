@@ -327,6 +327,13 @@ public class Benutzeroberfläche implements ItemListener {
 			textField.setText(Double.toString(ergebnis));
 			break;
 		
+		
+		// Multiplikation
+		case 3:
+			ergebnis = zahl * Double.parseDouble(textField.getText());
+			textField.setText(Double.toString(ergebnis));
+			break;
+		
 		// Dezimalzahl zu Hexadezimalzahl
 		case 8:
 
@@ -565,6 +572,25 @@ public class Benutzeroberfläche implements ItemListener {
 		button.setForeground(Color.WHITE);
 		button.setBackground(Color.BLACK);
 		frame.getContentPane().add(button);
+		
+		
+		
+		
+		// Button für "*"
+				JButton button_22 = new JButton("*");
+				button_22.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						zahl = Double.parseDouble(textField.getText()); // zahl wird vom Benutzer gewählt
+						rechnen = 3; // ruft case 3 von funktionen() auf
+						textField.setText("");
+						label1.setText(zahl + "*"); // zahl erscheint mit operation oben im label
+					}
+				});
+				button_22.setBounds(98, 122, 47, 23);
+				button_22.setForeground(Color.WHITE);
+				button_22.setBackground(Color.BLACK);
+				frame.getContentPane().add(button_22);
+				
 		// Button für "5"
 		JButton button_1 = new JButton("5");
 		button_1.addActionListener(new ActionListener() {
